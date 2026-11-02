@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran Kursus</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <main class="container">
+        <section class="registration-card">
+
+            <div class="form-header">
+                <span class="label">PENDAFTARAN KURSUS</span>
+                <h1>Form Pendaftaran Kursus</h1>
+                <p>Isi data berikut untuk mendaftar kelas pilihan Anda.</p>
+            </div>
+
+            <!-- POST dipakai karena data berisi password; action masih placeholder untuk backend -->
+            <form action="/proses-kursus" method="post">
+
+                <!-- type="text" -->
+                <div class="form-group">
+                    <label for="nama-peserta">Nama Peserta</label>
+                    <input type="text" id="nama-peserta" name="nama_peserta" placeholder="Masukkan nama lengkap" required>
+                </div>
+
+                <!-- type="email" -->
+                <div class="form-group">
+                    <label for="email-peserta">Email</label>
+                    <input type="email" id="email-peserta" name="email_peserta" placeholder="nama@email.com" required>
+                </div>
+
+                <!-- type="password" -->
+                <div class="form-group">
+                    <label for="password-peserta">Password</label>
+                    <input type="password" id="password-peserta" name="password_peserta" placeholder="Masukkan password" minlength="8" required>
+                    <small>Gunakan minimal 8 karakter.</small>
+                </div>
+
+                <!-- type="number" -->
+                <div class="form-group">
+                    <label for="sesi-per-minggu">Jumlah Sesi per Minggu</label>
+                    <input type="number" id="sesi-per-minggu" name="sesi_per_minggu" min="1" max="5" placeholder="Contoh: 2" required>
+                </div>
+
+                <!-- type="date" -->
+                <div class="form-group">
+                    <label for="tanggal-mulai">Tanggal Mulai Kursus</label>
+                    <input type="date" id="tanggal-mulai" name="tanggal_mulai" required>
+                </div>
+
+                <!-- Pilihan kursus -->
+                <div class="form-group">
+                    <label for="pilihan-kursus">Pilihan Kursus</label>
+                    <select id="pilihan-kursus" name="pilihan_kursus" required>
+                        <option value="">-- Pilih Kursus --</option>
+                        <option value="web">Pemrograman Web</option>
+                        <option value="grafis">Desain Grafis</option>
+                        <option value="jaringan">Jaringan Komputer</option>
+                        <option value="inggris">Bahasa Inggris</option>
+                    </select>
+                </div>
+
+                <!-- Catatan -->
+                <div class="form-group">
+                    <label for="catatan">Catatan Tambahan</label>
+                    <textarea id="catatan" name="catatan" rows="4" placeholder="Tuliskan catatan jika ada"></textarea>
+                </div>
+
+                <!-- Tiga jenis button: submit, reset, button biasa -->
+                <div class="button-group">
+                    <button type="submit" class="btn btn-primary">Daftar</button>
+                    <button type="reset" class="btn btn-reset">Reset</button>
+                    <button type="button" class="btn btn-secondary">Kembali</button>
+                </div>
+
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>
