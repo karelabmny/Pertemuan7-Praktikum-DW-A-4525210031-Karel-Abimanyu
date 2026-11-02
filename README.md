@@ -1,4 +1,4 @@
-# Praktikum Desain Web - Pertemuan 6: HTML Form Dasar
+# Praktikum Desain Web - Pertemuan 7
 
 Tugas praktikum Desain Web tentang HTML Form Dasar (input dan pengiriman data).
 
@@ -30,51 +30,35 @@ Setiap kontrol memiliki `label` yang terhubung lewat atribut `for` yang sama den
 └── README.md
 ```
 
-## Field Form
+## Fitur
 
-### Studi Kasus (`index.html`)
+1. Pendaftaran Kursus (kursus.html)
+Input nama peserta (text).
+Input email (email).
+Input password (password).
+Input jumlah sesi per minggu (number).
+Input tanggal mulai kursus (date).
+Pilihan program kursus menggunakan dropdown.
+Catatan tambahan menggunakan textarea.
+Tombol Daftar (submit), Reset (reset), dan Kembali (button).
 
-| Label | id | name | type |
-|---|---|---|---|
-| Nama Lengkap | `nama` | `nama` | `text` |
-| Email | `email` | `email` | `email` |
-| Password | `password` | `password` | `password` |
-| Nilai | `nilai` | `nilai` | `number` |
-| Tanggal Lahir | `tanggal-lahir` | `tanggal_lahir` | `date` |
-| Program Studi | `program-studi` | `program_studi` | `select` |
-| Alamat | `alamat` | `alamat` | `textarea` |
+## Cara Menggunakan
+Buka halaman formulir melalui browser.
+Pilih formulir yang ingin digunakan.
+Isi seluruh field yang wajib diisi.
+Klik tombol Daftar untuk menampilkan pesan konfirmasi.
+Klik tombol Reset untuk mengosongkan isian formulir.
+Klik tombol Bantuan untuk menampilkan informasi bantuan.
 
-### Individu (`kursus.html`)
-
-| Label | id | name | type |
-|---|---|---|---|
-| Nama Peserta | `nama-peserta` | `nama_peserta` | `text` |
-| Email | `email-peserta` | `email_peserta` | `email` |
-| Password | `password-peserta` | `password_peserta` | `password` |
-| Jumlah Sesi per Minggu | `sesi-per-minggu` | `sesi_per_minggu` | `number` |
-| Tanggal Mulai Kursus | `tanggal-mulai` | `tanggal_mulai` | `date` |
-| Pilihan Kursus | `pilihan-kursus` | `pilihan_kursus` | `select` |
-| Catatan Tambahan | `catatan` | `catatan` | `textarea` |
-
-Tiga jenis button pada kedua halaman: `submit` (Daftar), `reset` (Reset), dan button biasa `type="button"` (Kembali).
-
-## Perubahan dari File Awal
-
-- Menambahkan field **nilai** (`type="number"`, rentang 0 sampai 100, `step="0.01"`) sesuai data minimum studi kasus.
-- Menghapus field **umur** karena dapat dihitung dari tanggal lahir dan berisiko menyimpan data yang saling bertentangan.
-- Merapikan atribut `placeholder` dan `meta viewport` yang terpotong ke baris baru.
-- Mengubah warna button ke palet ungu gelap bernuansa Omen (Valorant), dengan latar halaman tetap putih.
-
-## Cara Menjalankan
-
-1. Clone repo ini atau unduh sebagai ZIP.
-2. Buka `index.html` atau `kursus.html` langsung di browser. Tidak perlu server atau instalasi apa pun.
-
-## Catatan
-
-- Method form adalah `post`. Atribut `action` (`/proses-pendaftaran` dan `/proses-kursus`) masih berupa alamat sementara karena praktikum ini belum memproses data di server, sehingga menekan **Daftar** akan menghasilkan error halaman tidak ditemukan.
-- Tombol **Kembali** belum memiliki perilaku, karena button biasa tidak melakukan apa pun tanpa JavaScript.
-- Pemilihan method `post` tidak otomatis membuat data aman. Pada penggunaan nyata tetap diperlukan HTTPS dan validasi di sisi server.
+3. Penerimaan Mahasiswa Baru (index.html)
+Input nama lengkap (text).
+Input email (email).
+Input password (password).
+Input nilai (number, rentang 0 sampai 100).
+Input tanggal lahir (date).
+Pilihan program studi menggunakan dropdown.
+Input alamat menggunakan textarea.
+Tombol Daftar (submit), Reset (reset), dan Kembali (button).
 
 ## Screenshot
 
